@@ -10,7 +10,7 @@ vectors = embed_texts(texts)
 print("Embedding completed. Number of vectors:", len(vectors))
 
 try:
-    collection = get_chroma_client(vectors)
+    collection = get_chroma_client(vectors, chunks)
     print("Vectors stored in the database. Total vectors:", len(vectors))
 except Exception as e:
     print(f"Error storing vectors: {e}")
