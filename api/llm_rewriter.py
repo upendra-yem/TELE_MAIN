@@ -1,4 +1,4 @@
-QUERY_UNDERSTANDING_PROMPT = """
+query_rewriter_prompt = """
 You are an expert Query Understanding Engine for an AI-powered Fleet Intelligence Platform.
 
 The input query has already been:
@@ -86,7 +86,7 @@ Rules:
 ----------------------------------------------------
 Determine the user's primary intent.
 
-Possible intents include (but are not limited to):
+Possible intents include:
 
 vehicle_status
 trip_information
@@ -111,7 +111,7 @@ Return the single best intent.
 
 ----------------------------------------------------
 Return ONLY valid JSON.
-
+{input_data}
 {
     "rewritten_query": "",
     "expanded_queries": [
