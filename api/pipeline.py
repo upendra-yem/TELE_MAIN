@@ -24,7 +24,8 @@ def redirect_pipeline(input):
     elif input['pipeline'] == "RAG" and input['rag_query'] !="null":
         #call rag pipeline in advisory_rag folder
         pass
-redirect_pipeline(route_output)
+redirect_pipeline(route_output) 
+
 
 
 
